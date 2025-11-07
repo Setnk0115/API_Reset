@@ -1,0 +1,24 @@
+{
+  "name": "api_reset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Setnk0115/API_Reset.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Setnk0115/API_Reset/issues"
+  },
+  "homepage": "https://github.com/Setnk0115/API_Reset#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
