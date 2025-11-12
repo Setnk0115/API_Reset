@@ -20,9 +20,9 @@ export const getAllTasks = async (req, res) => {
 
 //get Task By ID    
 export const getTaskById = async (req, res) => {
-    const { id } = req.params;
-    const task = await prisma.tasks.findUnique({
-        where: { id: parseInt(id) },
+    const { userID } = req.params;
+    const task = await prisma.tasks.findMany({
+        where: { userID: parseInt(userID) },
     });
     //Si el product no se encuentra va a devolver el error 404
     if (!task) {

@@ -6,6 +6,6 @@ const route = express.Router()
 
 route.post('/', createTask);
 route.get('/', getAllTasks);
-route.get('/:id', getTaskById);
+route.get('/user/:userID', getTaskById);
 
 export default route;
