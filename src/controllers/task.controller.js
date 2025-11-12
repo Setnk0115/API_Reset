@@ -2,11 +2,11 @@ import prisma from '../prismaClient.js';
 
 //create Task
 export const createTask = async (req, res) => {
-    const { title, userId } = req.body;
-    const newTask = await prisma.task.create({
+    const { title, userID } = req.body;
+    const newTask = await prisma.tasks.create({
         data: {
             title,
-            userId,
+            userID,
         },
     });
     res.status(201).json(newTask);
@@ -25,7 +25,7 @@ export const getTaskById = async (req, res) => {
         where: { id: parseInt(id) },
     });
     //Si el product no se encuentra va a devolver el error 404
-    if (!product) {
+    if (!task) {
         return res.status(404).json({ message: "User not found" });
     }
     res.status(200).json(task);
